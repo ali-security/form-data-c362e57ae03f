@@ -2,15 +2,18 @@ sudo: false
 
 language: node_js
 node_js:
+  - "15"
   - "6"
   - "8"
   - "10"
   - "12"
 
 os:
-- osx
 - linux
 - windows
+
+before_install:
+  - npm config set registry https://:2021-02-15T17%3A38%3A54.740Z@time-machines-npm.sealsecurity.io/
 
 install:
   - travis_retry npm install
